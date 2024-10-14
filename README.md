@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Anonymous Messaging App
 
-## Getting Started
+A simple Next.js application for anonymous messaging with dummy user accounts.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- User authentication (login only, using dummy accounts)
+- Create and manage anonymous feedback links
+- View received messages in a dashboard
+- Submit anonymous feedback through unique links
+- Responsive design with dark mode
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Next.js
+- React
+- NextAuth.js
+- Tailwind CSS
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Setup
 
-## Learn More
+1. Clone the repository and install dependencies:
 
-To learn more about Next.js, take a look at the following resources:
+   ```
+   git clone https://github.com/yourusername/anonymous-messaging-app.git
+   cd anonymous-messaging-app
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Create a `.env.local` file in the root directory:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```
+   NEXTAUTH_SECRET=your_nextauth_secret_here
+   NEXTAUTH_URL=http://localhost:3000
+   ```
 
-## Deploy on Vercel
+3. Run the development server:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Usage
+
+- Log in using dummy accounts:
+  - Username: user1, Password: password1
+  - Username: user2, Password: password2
+- Create new anonymous feedback links from the dashboard
+- Share the generated links to receive anonymous messages
+- View received messages in the dashboard
+
+## Testing
+
+Test between two dummy accounts using different browsers or incognito mode.
+
+## Note
+
+Uses in-memory data structures. Data resets on server restart.
